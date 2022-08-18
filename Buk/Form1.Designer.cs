@@ -120,19 +120,24 @@ namespace Buk
             this.searchBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchBar.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.searchBar.Location = new System.Drawing.Point(13, 19);
+            this.searchBar.Multiline = false;
             this.searchBar.Name = "searchBar";
             this.searchBar.Size = new System.Drawing.Size(143, 28);
             this.searchBar.TabIndex = 0;
-            this.searchBar.Text = "Search";
+            this.searchBar.Text = "";
+            this.searchBar.TextChanged += new System.EventHandler(this.searchBar_TextChanged);
             // 
             // searchButton
             // 
+            this.searchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(165)))), ((int)(((byte)(253)))));
+            this.searchButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(165)))), ((int)(((byte)(253)))));
+            this.searchButton.ForeColor = System.Drawing.Color.White;
             this.searchButton.Location = new System.Drawing.Point(174, 19);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(75, 28);
             this.searchButton.TabIndex = 1;
             this.searchButton.Text = "Search";
-            this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.UseVisualStyleBackColor = false;
             // 
             // panel5
             // 
@@ -260,6 +265,7 @@ namespace Buk
             this.wishListButton.Text = "Wishlist";
             this.wishListButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.wishListButton.UseVisualStyleBackColor = true;
+            this.wishListButton.Click += new System.EventHandler(this.wishListButton_Click);
             // 
             // Buk_Main_Interface
             // 

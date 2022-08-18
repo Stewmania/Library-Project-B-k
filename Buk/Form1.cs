@@ -73,5 +73,15 @@ namespace Buk
         {
 
         }
+
+        private void searchBar_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void wishListButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
