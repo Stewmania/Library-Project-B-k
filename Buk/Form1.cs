@@ -41,15 +41,47 @@ namespace Buk
 
         private void Exit_Btn_Hover(object sender, EventArgs e)
         {
-            Exit_Btn.BackColor = Color.FromArgb(219, 219, 219);
-            Exit_Btn.Image = Image.FromFile("C:\\Users\\stew4\\source\\repos\\Library-Project-B-k\\Buk\\Resources\\Exit_Btn_Dark_Red.png");
 
         }
 
         private void Exit_Btn_Leave(object sender, EventArgs e)
         {
-            Exit_Btn.BackColor = Color.FromArgb(219, 219, 219);
-            Exit_Btn.Image = Image.FromFile("C:\\Users\\stew4\\source\\repos\\Library-Project-B-k\\Buk\\Resources\\Exit_Btn_Red.png");
+
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void leftSidePanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bukLibraryLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void libraryButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void searchBar_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void wishListButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
