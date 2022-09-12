@@ -9,19 +9,39 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using IronPython.Hosting;
+using IronPython.Runtime;
+using Microsoft.Scripting;
+using Microsoft.Scripting.Hosting;
+
 namespace Buk
 {
     public partial class Buk_Main_Interface : Form
     {
+        
+
         public Buk_Main_Interface()
         {
             InitializeComponent();
+
+            getBook();
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr one, int two, int three, int four);
+
+        private void getBook()
+        {
+            // testOutput.Text = 
+
+            ScriptEngine engine = Python.CreateEngine();
+            ScriptScope scope = engine.CreateScope();
+            engine.ExecuteFile(@".\Users\stew4\source\repos\Stewmania\Library-Project-B-k\FetchBuks\amazon.py", scope);
+            dynamic fetchBooks = scope.GetVariable("fetchBooks");
+            var result = fetchBooks();
+        }
 
         private void Control_Bar_MouseDown(object sender, MouseEventArgs e)
         {
