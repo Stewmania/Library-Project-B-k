@@ -272,9 +272,9 @@ namespace Buk
             // 
             // testOutput
             // 
-            this.testOutput.Location = new System.Drawing.Point(30, 62);
+            this.testOutput.Location = new System.Drawing.Point(58, 58);
             this.testOutput.Name = "testOutput";
-            this.testOutput.Size = new System.Drawing.Size(441, 20);
+            this.testOutput.Size = new System.Drawing.Size(394, 20);
             this.testOutput.TabIndex = 0;
             // 
             // Buk_Main_Interface
