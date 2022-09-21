@@ -83,5 +83,11 @@ namespace Buk
         {
 
         }
+
+        private void barcodeScanner_Click(object sender, EventArgs e)
+        {
+            BarcodeScanner f2 = new BarcodeScanner();
+            f2.Show();
+        }
     }
 }
