@@ -48,6 +48,7 @@ namespace Buk
             this.searchBar = new System.Windows.Forms.RichTextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.testOutput = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.barcodeScanner = new System.Windows.Forms.Button();
             this.leftSidePanel.SuspendLayout();
@@ -56,6 +57,14 @@ namespace Buk
             this.panel1.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // leftSidePanel
@@ -67,13 +76,6 @@ namespace Buk
             this.leftSidePanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftSidePanel.Location = new System.Drawing.Point(0, 0);
             this.leftSidePanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.leftSidePanel.Name = "leftSidePanel";
-            this.leftSidePanel.Size = new System.Drawing.Size(247, 730);
-            this.leftSidePanel.TabIndex = 1;
-            this.leftSidePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.leftSidePanel_Paint);
-            // 
-            // panel4
-            // 
             this.panel4.Controls.Add(this.wishListButton);
             this.panel4.Controls.Add(this.recommendedButton);
             this.panel4.Controls.Add(this.libraryButton);
@@ -147,19 +149,19 @@ namespace Buk
             this.panel10.Size = new System.Drawing.Size(247, 27);
             this.panel10.TabIndex = 5;
             // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(185, 1);
+            this.panel2.TabIndex = 0;
+            // 
             // bukLibraryLabel
             // 
             this.bukLibraryLabel.AutoSize = true;
             this.bukLibraryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bukLibraryLabel.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.bukLibraryLabel.Location = new System.Drawing.Point(13, 10);
-            this.bukLibraryLabel.Margin = new System.Windows.Forms.Padding(13, 0, 0, 18);
-            this.bukLibraryLabel.Name = "bukLibraryLabel";
-            this.bukLibraryLabel.Size = new System.Drawing.Size(91, 17);
-            this.bukLibraryLabel.TabIndex = 2;
-            this.bukLibraryLabel.Text = "Buk Library";
-            this.bukLibraryLabel.Click += new System.EventHandler(this.bukLibraryLabel_Click);
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -170,19 +172,19 @@ namespace Buk
             this.panel2.Size = new System.Drawing.Size(247, 1);
             this.panel2.TabIndex = 0;
             // 
+            this.bukLibraryLabel.Margin = new System.Windows.Forms.Padding(13, 0, 0, 18);
+            this.bukLibraryLabel.Name = "bukLibraryLabel";
+            this.bukLibraryLabel.Size = new System.Drawing.Size(91, 17);
+            this.bukLibraryLabel.TabIndex = 2;
+            this.bukLibraryLabel.Text = "Buk Library";
+            this.bukLibraryLabel.Click += new System.EventHandler(this.bukLibraryLabel_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(923, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(348, 730);
-            this.panel1.TabIndex = 2;
-            // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -205,6 +207,13 @@ namespace Buk
             this.panel6.Size = new System.Drawing.Size(348, 1);
             this.panel6.TabIndex = 1;
             // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(923, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(348, 730);
+            this.panel1.TabIndex = 2;
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.panel8);
@@ -212,13 +221,6 @@ namespace Buk
             this.panel3.Controls.Add(this.searchButton);
             this.panel3.Controls.Add(this.searchBar);
             this.panel3.Location = new System.Drawing.Point(0, 4);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(348, 94);
-            this.panel3.TabIndex = 0;
-            // 
-            // panel8
-            // 
             this.panel8.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel8.Location = new System.Drawing.Point(0, 92);
             this.panel8.Margin = new System.Windows.Forms.Padding(0);
@@ -233,6 +235,13 @@ namespace Buk
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(312, 12);
             this.panel7.TabIndex = 2;
+            this.searchBar.Location = new System.Drawing.Point(13, 19);
+            this.searchBar.Multiline = false;
+            this.searchBar.Name = "searchBar";
+            this.searchBar.Size = new System.Drawing.Size(143, 28);
+            this.searchBar.TabIndex = 0;
+            this.searchBar.Text = "";
+            this.searchBar.TextChanged += new System.EventHandler(this.searchBar_TextChanged);
             // 
             // searchButton
             // 
@@ -240,13 +249,6 @@ namespace Buk
             this.searchButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(165)))), ((int)(((byte)(253)))));
             this.searchButton.ForeColor = System.Drawing.Color.White;
             this.searchButton.Location = new System.Drawing.Point(232, 23);
-            this.searchButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(100, 34);
-            this.searchButton.TabIndex = 1;
-            this.searchButton.Text = "Search";
-            this.searchButton.UseVisualStyleBackColor = false;
-            // 
             // searchBar
             // 
             this.searchBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -261,6 +263,13 @@ namespace Buk
             this.searchBar.Text = "";
             this.searchBar.TextChanged += new System.EventHandler(this.searchBar_TextChanged);
             // 
+            this.searchButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.Size = new System.Drawing.Size(100, 34);
+            this.searchButton.TabIndex = 1;
+            this.searchButton.Text = "Search";
+            this.searchButton.UseVisualStyleBackColor = false;
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -274,13 +283,7 @@ namespace Buk
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.White;
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(247, 1);
-            this.panel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(676, 729);
-            this.panel11.TabIndex = 4;
-            // 
+            this.panel11.Controls.Add(this.testOutput);
             // label1
             // 
             this.label1.AutoSize = true;
@@ -292,7 +295,7 @@ namespace Buk
             this.label1.Text = "Barcode Scanner:";
             // 
             // barcodeScanner
-            // 
+            this.recommendedButton.Size = new System.Drawing.Size(164, 41);
             this.barcodeScanner.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.barcodeScanner.Location = new System.Drawing.Point(17, 67);
             this.barcodeScanner.Name = "barcodeScanner";
@@ -301,6 +304,17 @@ namespace Buk
             this.barcodeScanner.Text = "Start";
             this.barcodeScanner.UseVisualStyleBackColor = true;
             this.barcodeScanner.Click += new System.EventHandler(this.barcodeScanner_Click);
+            this.testOutput.Location = new System.Drawing.Point(58, 58);
+            this.testOutput.Name = "testOutput";
+            this.testOutput.Size = new System.Drawing.Size(394, 20);
+            this.testOutput.TabIndex = 0;
+            this.wishListButton.Name = "wishListButton";
+            this.wishListButton.Size = new System.Drawing.Size(164, 41);
+            this.wishListButton.TabIndex = 0;
+            this.wishListButton.Text = "Wishlist";
+            this.wishListButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.wishListButton.UseVisualStyleBackColor = true;
+            this.wishListButton.Click += new System.EventHandler(this.wishListButton_Click);
             // 
             // Buk_Main_Interface
             // 
@@ -316,13 +330,13 @@ namespace Buk
             this.Name = "Buk_Main_Interface";
             this.Text = "Buk";
             this.leftSidePanel.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.panel3.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -339,6 +353,9 @@ namespace Buk
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button barcodeScanner;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox testOutput;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button libraryButton;
         private System.Windows.Forms.Panel panel10;
@@ -346,8 +363,6 @@ namespace Buk
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Button wishListButton;
         private System.Windows.Forms.Button recommendedButton;
-        private System.Windows.Forms.Button barcodeScanner;
-        private System.Windows.Forms.Label label1;
     }
 }
 

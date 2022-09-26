@@ -62,3 +62,16 @@ C:\Users\chris\Source\Repos\Stewmania\Library-Project-B-k\Buk\obj\Debug\Buk.cspr
 C:\Users\chris\Source\Repos\Stewmania\Library-Project-B-k\Buk\obj\Debug\Buk.csproj.CopyComplete
 C:\Users\chris\Source\Repos\Stewmania\Library-Project-B-k\Buk\obj\Debug\Buk.exe
 C:\Users\chris\Source\Repos\Stewmania\Library-Project-B-k\Buk\obj\Debug\Buk.pdb
+C:\Users\stew4\Source\Repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\ipy32.exe
+C:\Users\stew4\Source\Repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\IronPython.dll
+C:\Users\stew4\Source\Repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\IronPython.Modules.dll
+C:\Users\stew4\Source\Repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\IronPython.SQLite.dll
+C:\Users\stew4\Source\Repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\IronPython.Wpf.dll
+C:\Users\stew4\Source\Repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\Microsoft.Dynamic.dll
+C:\Users\stew4\Source\Repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\Microsoft.Scripting.dll
+C:\Users\stew4\Source\Repos\Stewmania\Library-Project-B-k\Buk\obj\Debug\Buk.csproj.CopyComplete
+C:\Users\stew4\Source\Repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\IKVM.Reflection.dll
+C:\Users\stew4\Source\Repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\ipy.exe
+C:\Users\stew4\Source\Repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\ipyc.exe
+C:\Users\stew4\Source\Repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\ipyw.exe
+C:\Users\stew4\Source\Repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\ipyw32.exe

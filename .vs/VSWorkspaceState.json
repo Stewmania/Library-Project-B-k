@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Buk"
+    "\\Buk",
+    "\\FetchBuks"
   ],
-  "SelectedNode": "\\Buk\\Buk.sln",
+  "SelectedNode": "\\FetchBuks\\amazon.py",
   "PreviewInSolutionExplorer": false
 }
