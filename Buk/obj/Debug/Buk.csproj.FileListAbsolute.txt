@@ -75,3 +75,14 @@ C:\Users\stew4\Source\Repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\ipy.exe
 C:\Users\stew4\Source\Repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\ipyc.exe
 C:\Users\stew4\Source\Repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\ipyw.exe
 C:\Users\stew4\Source\Repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\ipyw32.exe
+C:\Users\stew4\source\repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\AForge.dll
+C:\Users\stew4\source\repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\stew4\source\repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\AForge.Video.dll
+C:\Users\stew4\source\repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\zxing.dll
+C:\Users\stew4\source\repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\zxing.presentation.dll
+C:\Users\stew4\source\repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\AForge.xml
+C:\Users\stew4\source\repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\AForge.Video.xml
+C:\Users\stew4\source\repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\stew4\source\repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\zxing.xml
+C:\Users\stew4\source\repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\zxing.presentation.xml
+C:\Users\stew4\source\repos\Stewmania\Library-Project-B-k\Buk\obj\Debug\Buk.BarcodeScanner.resources
