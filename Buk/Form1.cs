@@ -37,18 +37,7 @@ namespace Buk
         {
             System.Diagnostics.Process process = new System.Diagnostics.Process();
             process.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-            /* 
-             * You may need to change this to your working directory to get this to work since
-             * obviously that will be different for each of us.
-             * 
-             * Connor's directory:
-             * @"C:\Users\stew4\Source\Repos\Stewmania\Library-Project-B-k\Buk\FetchBuks\amazon\fetchBuk.exe"
-             * 
-             * Graham's directory:
-             * Christopher's directory:
-             * Hannah's directory:
-             */
-            process.StartInfo.FileName = @"C:\Users\stew4\Source\Repos\Stewmania\Library-Project-B-k\Buk\FetchBuks\amazon\fetchBuk.exe";
+            process.StartInfo.FileName = @"..\..\FetchBuks\amazon\fetchBuk.exe";
             /*
              * This is where we will place the ISBN we get from the scanner
              */
@@ -64,6 +53,7 @@ namespace Buk
                 q += process.StandardOutput.ReadToEnd();
             }
             testOutput.Text = q;
+            
         }
 
         private void Control_Bar_MouseDown(object sender, MouseEventArgs e)

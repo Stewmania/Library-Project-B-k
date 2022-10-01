@@ -86,3 +86,4 @@ C:\Users\stew4\source\repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\AForge.V
 C:\Users\stew4\source\repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\zxing.xml
 C:\Users\stew4\source\repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\zxing.presentation.xml
 C:\Users\stew4\source\repos\Stewmania\Library-Project-B-k\Buk\obj\Debug\Buk.BarcodeScanner.resources
+C:\Users\stew4\Source\Repos\Stewmania\Library-Project-B-k\Buk\obj\Debug\Buk.Resource.resources
