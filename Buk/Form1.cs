@@ -19,13 +19,12 @@ namespace Buk
 {
     public partial class Buk_Main_Interface : Form
     {
-        
+
+        public static string currentBarcode = null;
 
         public Buk_Main_Interface()
         {
-            InitializeComponent();
-
-            getBook();
+            InitializeComponent();  
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -33,15 +32,12 @@ namespace Buk
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr one, int two, int three, int four);
 
-        private void getBook()
+        private void getBook(string barcode)
         {
             System.Diagnostics.Process process = new System.Diagnostics.Process();
             process.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
             process.StartInfo.FileName = @"..\..\FetchBuks\amazon\fetchBuk.exe";
-            /*
-             * This is where we will place the ISBN we get from the scanner
-             */
-            process.StartInfo.Arguments = "Percy";
+            process.StartInfo.Arguments = barcode;
             process.StartInfo.UseShellExecute = false;
             process.StartInfo.CreateNoWindow = true;
             process.StartInfo.RedirectStandardOutput = true;
@@ -53,7 +49,6 @@ namespace Buk
                 q += process.StandardOutput.ReadToEnd();
             }
             testOutput.Text = q;
-            
         }
 
         private void Control_Bar_MouseDown(object sender, MouseEventArgs e)
@@ -119,8 +114,29 @@ namespace Buk
 
         private void barcodeScanner_Click(object sender, EventArgs e)
         {
-            BarcodeScanner f2 = new BarcodeScanner();
-            f2.Show();
+            using (BarcodeScanner f2 = new BarcodeScanner())
+            {
+                var result = f2.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    string barcode = f2.currentBarcodeResult;
+                    getBook(barcode);
+                }
+                f2.Show();
+            }
+        }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(searchBar.Text))
+            {
+                // TODO: figure out how to make textbox red to let user know its a required field
+            }
+            else
+            {
+                getBook(searchBar.Text);
+                searchBar.Text = "";
+            }
         }
     }
 }

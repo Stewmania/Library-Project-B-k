@@ -32,8 +32,9 @@ namespace Buk
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Buk_Main_Interface));
             this.leftSidePanel = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.wishListButton = new System.Windows.Forms.Button();
             this.recommendedButton = new System.Windows.Forms.Button();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.wishListButton = new System.Windows.Forms.Button();
             this.libraryButton = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.bukLibraryLabel = new System.Windows.Forms.Label();
@@ -49,7 +50,6 @@ namespace Buk
             this.searchButton = new System.Windows.Forms.Button();
             this.searchBar = new System.Windows.Forms.RichTextBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
             this.testOutput = new System.Windows.Forms.TextBox();
             this.leftSidePanel.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -84,6 +84,32 @@ namespace Buk
             this.panel4.Size = new System.Drawing.Size(150, 158);
             this.panel4.TabIndex = 6;
             // 
+            // recommendedButton
+            // 
+            this.recommendedButton.FlatAppearance.BorderSize = 0;
+            this.recommendedButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.recommendedButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.recommendedButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.recommendedButton.Image = ((System.Drawing.Image)(resources.GetObject("recommendedButton.Image")));
+            this.recommendedButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.recommendedButton.Location = new System.Drawing.Point(13, 59);
+            this.recommendedButton.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
+            this.recommendedButton.Name = "recommendedButton";
+            this.recommendedButton.Size = new System.Drawing.Size(123, 33);
+            this.recommendedButton.TabIndex = 0;
+            this.recommendedButton.Text = "Recommended";
+            this.recommendedButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.recommendedButton.UseVisualStyleBackColor = true;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.White;
+            this.panel11.Location = new System.Drawing.Point(2, 162);
+            this.panel11.Margin = new System.Windows.Forms.Padding(2);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(150, 81);
+            this.panel11.TabIndex = 0;
+            // 
             // wishListButton
             // 
             this.wishListButton.FlatAppearance.BorderSize = 0;
@@ -101,23 +127,6 @@ namespace Buk
             this.wishListButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.wishListButton.UseVisualStyleBackColor = true;
             this.wishListButton.Click += new System.EventHandler(this.wishListButton_Click);
-            // 
-            // recommendedButton
-            // 
-            this.recommendedButton.FlatAppearance.BorderSize = 0;
-            this.recommendedButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.recommendedButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.recommendedButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.recommendedButton.Image = ((System.Drawing.Image)(resources.GetObject("recommendedButton.Image")));
-            this.recommendedButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.recommendedButton.Location = new System.Drawing.Point(13, 59);
-            this.recommendedButton.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
-            this.recommendedButton.Name = "recommendedButton";
-            this.recommendedButton.Size = new System.Drawing.Size(123, 33);
-            this.recommendedButton.TabIndex = 0;
-            this.recommendedButton.Text = "Recommended";
-            this.recommendedButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.recommendedButton.UseVisualStyleBackColor = true;
             // 
             // libraryButton
             // 
@@ -195,7 +204,7 @@ namespace Buk
             // 
             this.barcodeScanner.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.barcodeScanner.Location = new System.Drawing.Point(13, 54);
-            this.barcodeScanner.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.barcodeScanner.Margin = new System.Windows.Forms.Padding(2);
             this.barcodeScanner.Name = "barcodeScanner";
             this.barcodeScanner.Size = new System.Drawing.Size(236, 123);
             this.barcodeScanner.TabIndex = 6;
@@ -231,7 +240,7 @@ namespace Buk
             this.panel3.Controls.Add(this.searchButton);
             this.panel3.Controls.Add(this.searchBar);
             this.panel3.Location = new System.Drawing.Point(0, 3);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(261, 81);
             this.panel3.TabIndex = 3;
@@ -264,6 +273,7 @@ namespace Buk
             this.searchButton.TabIndex = 1;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = false;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // searchBar
             // 
@@ -287,19 +297,10 @@ namespace Buk
             this.panel5.Size = new System.Drawing.Size(542, 1);
             this.panel5.TabIndex = 3;
             // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.White;
-            this.panel11.Location = new System.Drawing.Point(2, 162);
-            this.panel11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(150, 81);
-            this.panel11.TabIndex = 0;
-            // 
             // testOutput
             // 
             this.testOutput.Location = new System.Drawing.Point(279, 246);
-            this.testOutput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.testOutput.Margin = new System.Windows.Forms.Padding(2);
             this.testOutput.Name = "testOutput";
             this.testOutput.Size = new System.Drawing.Size(296, 20);
             this.testOutput.TabIndex = 0;

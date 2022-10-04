@@ -15,6 +15,8 @@ namespace Buk
 {
     public partial class BarcodeScanner : Form
     {
+        public string currentBarcodeResult { get; set; }
+
         public BarcodeScanner()
         {
             InitializeComponent();
@@ -22,8 +24,6 @@ namespace Buk
 
         FilterInfoCollection filterInfoCollection;
         VideoCaptureDevice videoCaptureDevice;
-
-       
 
         private void btnStart_Click(object sender, EventArgs e)
         {
@@ -43,7 +43,6 @@ namespace Buk
                 {
                     txtBarcode.Text = result.ToString();
                 }));
-
             }
             pictureBox.Image = bitmap;
         }
@@ -64,7 +63,21 @@ namespace Buk
             {
                 cboCamera.Items.Add(device.Name);
             }
-            cboCamera.SelectedIndex = 0;
+            if (cboCamera.Items.Count != 0)
+                cboCamera.SelectedIndex = 0;
+        }
+
+        private void submitButton_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtBarcode.Text))
+            {
+                // TODO: figure out how to make textbox red to let user know its a required field
+            } else
+            {
+                this.currentBarcodeResult = txtBarcode.Text;
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
         }
     }
 }
