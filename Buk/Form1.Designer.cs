@@ -304,6 +304,7 @@ namespace Buk
             this.testOutput.Name = "testOutput";
             this.testOutput.Size = new System.Drawing.Size(296, 20);
             this.testOutput.TabIndex = 0;
+            this.testOutput.TextChanged += new System.EventHandler(this.testOutput_TextChanged);
             // 
             // Buk_Main_Interface
             // 
@@ -317,6 +318,7 @@ namespace Buk
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Buk_Main_Interface";
             this.Text = "Buk";
+            this.Load += new System.EventHandler(this.Buk_Main_Interface_Load);
             this.leftSidePanel.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel10.ResumeLayout(false);

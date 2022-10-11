@@ -47,6 +47,10 @@ namespace Buk
             while (!process.HasExited)
             {
                 q += process.StandardOutput.ReadToEnd();
+
+
+
+
             }
             testOutput.Text = q;
         }
@@ -137,6 +141,16 @@ namespace Buk
                 getBook(searchBar.Text);
                 searchBar.Text = "";
             }
+        }
+
+        private void Buk_Main_Interface_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void testOutput_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
