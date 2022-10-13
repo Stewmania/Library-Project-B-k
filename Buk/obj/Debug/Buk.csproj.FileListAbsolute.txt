@@ -110,3 +110,4 @@ C:\Users\gcrac\Source\Repos\Library_Project_Bk\Buk\obj\Debug\Buk.csproj.CoreComp
 C:\Users\gcrac\Source\Repos\Library_Project_Bk\Buk\obj\Debug\Buk.csproj.CopyComplete
 C:\Users\gcrac\Source\Repos\Library_Project_Bk\Buk\obj\Debug\Buk.exe
 C:\Users\gcrac\Source\Repos\Library_Project_Bk\Buk\obj\Debug\Buk.pdb
+C:\Users\gcrac\Source\Repos\Library_Project_Bk\Buk\bin\Debug\BukDB.db
