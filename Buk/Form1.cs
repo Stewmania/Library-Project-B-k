@@ -127,6 +127,13 @@ namespace Buk
                     getBook(barcode);
                 }
                 f2.Show();
+                String[] coverURLS = {"https://m.media-amazon.com/images/I/512xFZRDM3L._SY346_.jpg",
+                                    "https://m.media-amazon.com/images/I/51L4QD5L2vL._SY346_.jpg",
+                                    "https://m.media-amazon.com/images/I/51mQnL9z7RL._SY346_.jpg",
+                                    "https://m.media-amazon.com/images/I/51QwExcEvXL._SY346_.jpg",
+                                    "https://m.media-amazon.com/images/I/518Jx+cKHiL._SY346_.jpg"};
+                ConfirmationForm confirmForm = new ConfirmationForm(coverURLS, false);
+                confirmForm.Show();
             }
         }
 
@@ -140,6 +147,13 @@ namespace Buk
             {
                 getBook(searchBar.Text);
                 searchBar.Text = "";
+                String[] coverURLS = {"https://m.media-amazon.com/images/I/512xFZRDM3L._SY346_.jpg",
+                                    "https://m.media-amazon.com/images/I/51L4QD5L2vL._SY346_.jpg",
+                                    "https://m.media-amazon.com/images/I/51mQnL9z7RL._SY346_.jpg",
+                                    "https://m.media-amazon.com/images/I/51QwExcEvXL._SY346_.jpg",
+                                    "https://m.media-amazon.com/images/I/518Jx+cKHiL._SY346_.jpg"};
+                ConfirmationForm confirmForm = new ConfirmationForm(coverURLS, true);
+                confirmForm.Show();
             }
         }
 

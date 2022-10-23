@@ -116,3 +116,4 @@ C:\Users\stew4\Source\Repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\Dapper.d
 C:\Users\stew4\Source\Repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\System.Data.SQLite.dll
 C:\Users\stew4\Source\Repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\Dapper.xml
 C:\Users\stew4\Source\Repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\System.Data.SQLite.xml
+C:\Users\stew4\source\repos\Stewmania\Library-Project-B-k\Buk\obj\Debug\Buk.ConfirmationForm.resources
