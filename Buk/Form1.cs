@@ -14,6 +14,7 @@ using IronPython.Hosting;
 using IronPython.Runtime;
 using Microsoft.Scripting;
 using Microsoft.Scripting.Hosting;
+using Microsoft.VisualBasic.FileIO;
 
 namespace Buk
 {
@@ -24,7 +25,7 @@ namespace Buk
 
         public Buk_Main_Interface()
         {
-            InitializeComponent();  
+            InitializeComponent();
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -51,6 +52,25 @@ namespace Buk
 
 
 
+            }
+
+            List<Dictionary<string, string>> test = ParseCSV();
+            foreach (var dict in test)
+            {
+                Debug.WriteLine("Title:");
+                Debug.WriteLine(dict["Title"]);
+                Debug.WriteLine("Description:");
+                Debug.WriteLine(dict["Description"]);
+                Debug.WriteLine("Cover:");
+                Debug.WriteLine(dict["Cover"]);
+                Debug.WriteLine("Published Date:");
+                Debug.WriteLine(dict["Published Date"]);
+                Debug.WriteLine("Rating:");
+                Debug.WriteLine(dict["Rating"]);
+                Debug.WriteLine("Author:");
+                Debug.WriteLine(dict["Author(s)"]);
+                Debug.WriteLine("");
+                Debug.WriteLine("");
             }
             testOutput.Text = q;
         }
@@ -125,6 +145,7 @@ namespace Buk
                 {
                     string barcode = f2.currentBarcodeResult;
                     getBook(barcode);
+
                 }
                 f2.Show();
                 String[] coverURLS = {"https://m.media-amazon.com/images/I/512xFZRDM3L._SY346_.jpg",
@@ -135,6 +156,38 @@ namespace Buk
                 ConfirmationForm confirmForm = new ConfirmationForm(coverURLS, false);
                 confirmForm.Show();
             }
+        }
+
+        private List<Dictionary<string, string>> ParseCSV()
+        {
+            var file = new StreamReader(@"C:\Users\chris\source\repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\returnedBooks.csv");
+            string text = System.IO.File.ReadAllText(@"C:\Users\chris\source\repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\returnedBooks.csv");
+            List<Dictionary<string, string>> books = new List<Dictionary<string, string>>();
+      
+            var values = text.Split(new string[] { "\r\n\r" }, StringSplitOptions.RemoveEmptyEntries);
+
+            for (int i = 0; i < values.Length; i++)
+            {
+                
+
+                TextFieldParser parser = new TextFieldParser(new StringReader(values[i].Trim()));
+                parser.HasFieldsEnclosedInQuotes = true;
+                parser.SetDelimiters(",");
+                while (!parser.EndOfData)
+                {
+                    string[] fields = parser.ReadFields();
+                    Dictionary<string, string> bookInformation = new Dictionary<string, string>();
+                    bookInformation.Add("Title", fields[0]);
+                    bookInformation.Add("Description", fields[1]);
+                    bookInformation.Add("Cover", fields[2]);
+                    bookInformation.Add("Published Date", fields[3]);
+                    bookInformation.Add("Rating", fields[4]);
+                    bookInformation.Add("Author(s)", fields[5]);
+                    books.Add(bookInformation);
+                }
+                
+            }
+            return books;
         }
 
         private void searchButton_Click(object sender, EventArgs e)

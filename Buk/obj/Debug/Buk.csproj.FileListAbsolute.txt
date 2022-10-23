@@ -117,3 +117,10 @@ C:\Users\stew4\Source\Repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\System.D
 C:\Users\stew4\Source\Repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\Dapper.xml
 C:\Users\stew4\Source\Repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\System.Data.SQLite.xml
 C:\Users\stew4\source\repos\Stewmania\Library-Project-B-k\Buk\obj\Debug\Buk.ConfirmationForm.resources
+C:\Users\chris\Source\Repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\BukDB.db
+C:\Users\chris\Source\Repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\Dapper.dll
+C:\Users\chris\Source\Repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\System.Data.SQLite.dll
+C:\Users\chris\Source\Repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\Dapper.xml
+C:\Users\chris\Source\Repos\Stewmania\Library-Project-B-k\Buk\bin\Debug\System.Data.SQLite.xml
+C:\Users\chris\Source\Repos\Stewmania\Library-Project-B-k\Buk\obj\Debug\Buk.ConfirmationForm.resources
+C:\Users\chris\Source\Repos\Stewmania\Library-Project-B-k\Buk\obj\Debug\Buk.Resource.resources

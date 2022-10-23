@@ -1,8 +1,8 @@
 {
   "ExpandedNodes": [
-    "",
     "\\Buk",
-    "\\Buk\\FetchBuks"
+    "\\Buk\\bin",
+    "\\Buk\\bin\\Debug"
   ],
   "PreviewInSolutionExplorer": false
 }
