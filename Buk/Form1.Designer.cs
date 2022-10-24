@@ -50,7 +50,6 @@ namespace Buk
             this.searchButton = new System.Windows.Forms.Button();
             this.searchBar = new System.Windows.Forms.RichTextBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.testOutput = new System.Windows.Forms.TextBox();
             this.leftSidePanel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -297,21 +296,11 @@ namespace Buk
             this.panel5.Size = new System.Drawing.Size(542, 1);
             this.panel5.TabIndex = 3;
             // 
-            // testOutput
-            // 
-            this.testOutput.Location = new System.Drawing.Point(279, 246);
-            this.testOutput.Margin = new System.Windows.Forms.Padding(2);
-            this.testOutput.Name = "testOutput";
-            this.testOutput.Size = new System.Drawing.Size(296, 20);
-            this.testOutput.TabIndex = 0;
-            this.testOutput.TextChanged += new System.EventHandler(this.testOutput_TextChanged);
-            // 
             // Buk_Main_Interface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(953, 593);
-            this.Controls.Add(this.testOutput);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.leftSidePanel);
@@ -328,7 +317,6 @@ namespace Buk
             this.panel9.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -346,7 +334,6 @@ namespace Buk
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button barcodeScanner;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox testOutput;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button libraryButton;
         private System.Windows.Forms.Panel panel10;

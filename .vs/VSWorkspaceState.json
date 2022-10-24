@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
+    "",
     "\\Buk",
     "\\Buk\\bin",
-    "\\Buk\\bin\\Debug"
+    "\\Buk\\bin\\Debug",
+    "\\Buk\\FetchBuks"
   ],
+  "SelectedNode": "\\Buk\\ConfirmationForm.cs",
   "PreviewInSolutionExplorer": false
 }
