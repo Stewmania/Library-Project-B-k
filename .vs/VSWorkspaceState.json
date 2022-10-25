@@ -2,10 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\Buk",
-    "\\Buk\\bin",
-    "\\Buk\\bin\\Debug",
-    "\\Buk\\FetchBuks"
+    "\\Buk\\bin"
   ],
-  "SelectedNode": "\\Buk\\ConfirmationForm.cs",
+  "SelectedNode": "\\Buk\\BukDB.sqbpro",
   "PreviewInSolutionExplorer": false
 }

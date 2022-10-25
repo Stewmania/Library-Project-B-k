@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -15,20 +16,28 @@ using IronPython.Runtime;
 using Microsoft.Scripting;
 using Microsoft.Scripting.Hosting;
 using Microsoft.VisualBasic.FileIO;
+using Microsoft.Data.Sqlite;
+
 
 namespace Buk
 {
+    
+
     public partial class Buk_Main_Interface : Form
     {
+        
 
         public static string currentBarcode = null;
-        private List<Dictionary<string, string>> booksToAddToDatabase;
+        public List<Dictionary<string, string>> booksToAddToDatabase;
 
         public Buk_Main_Interface()
         {
             InitializeComponent();
             this.booksToAddToDatabase = new List<Dictionary<string, string>>();
+
+            
         }
+
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();

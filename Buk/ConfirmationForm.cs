@@ -11,6 +11,8 @@ using System.Net;
 using System.IO;
 using System.Windows.Forms;
 using System.Diagnostics;
+using Microsoft.Data.Sqlite;
+using System.Data.SQLite;
 
 namespace Buk
 {
@@ -142,6 +144,23 @@ namespace Buk
                     Dictionary<string, string> tempDict = this.books[bookNumber];
                     tempList.Add(tempDict);
                 }
+
+                using (var connection = new SQLiteConnection("Data Source = BukDB.db"))
+                {
+                    connection.Open();
+                    var command = connection.CreateCommand();
+                    command.CommandText = @"
+                    
+                   INSERT INTO Library (Title, Author, Description, Cover, PublishD, Rating) 
+                    VALUES ('test title', 'test Author', 'test desc', 'test cover', 'test publish', 'test rating' )
+                ";
+
+                    int commandResult = command.ExecuteNonQuery();
+                    
+                }
+
+
+
                 this.booksToAddToUserLibrary = tempList;
                 this.DialogResult = DialogResult.OK;
                 this.Close();
