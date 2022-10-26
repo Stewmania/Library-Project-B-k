@@ -140,7 +140,24 @@ namespace Buk
                         foreach(var book in this.booksToAddToDatabase)
                         {
                             Debug.WriteLine(book["Title"]);
-                        }
+                            using (var connection = new SQLiteConnection("Data Source = BukDB.db"))
+                            {
+                                connection.Open();
+                                var command = connection.CreateCommand();
+                                command.CommandText = $"INSERT INTO Library (Title, Author, Description, Cover, PublishD, Rating) VALUES (@Title, @Author, @Description, @Cover, @Publish, @Rating )";
+
+                                command.Parameters.AddWithValue("@Title", book["Title"]);
+                                command.Parameters.AddWithValue("@Author", book["Author(s)"]);
+                                command.Parameters.AddWithValue("@Description", book["Description"]);
+                                command.Parameters.AddWithValue("@Cover", book["Cover"]);
+                                command.Parameters.AddWithValue("@Publish", book["Published Date"]);
+                                command.Parameters.AddWithValue("@Rating", book["Rating"]);
+
+
+                                int commandResult = command.ExecuteNonQuery();
+
+
+                            }
                     }
 
                 }
@@ -170,6 +187,23 @@ namespace Buk
                     foreach(var book in this.booksToAddToDatabase)
                     {
                         Debug.WriteLine(book["Title"]);
+                        using (var connection = new SQLiteConnection("Data Source = BukDB.db"))
+                        {
+                            connection.Open();
+                            var command = connection.CreateCommand();
+                            command.CommandText = $"INSERT INTO Library (Title, Author, Description, Cover, PublishD, Rating) VALUES (@Title, @Author, @Description, @Cover, @Publish, @Rating )";
+
+                            command.Parameters.AddWithValue("@Title", book["Title"]);
+                            command.Parameters.AddWithValue("@Author", book["Author(s)"]);
+                            command.Parameters.AddWithValue("@Description", book["Description"]);
+                            command.Parameters.AddWithValue("@Cover", book["Cover"]);
+                            command.Parameters.AddWithValue("@Publish", book["Published Date"]);
+                            command.Parameters.AddWithValue("@Rating", book["Rating"]);
+
+
+                            int commandResult = command.ExecuteNonQuery();
+
+                        }
                     }
                 }
             }

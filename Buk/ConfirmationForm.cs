@@ -145,21 +145,6 @@ namespace Buk
                     tempList.Add(tempDict);
                 }
 
-                using (var connection = new SQLiteConnection("Data Source = BukDB.db"))
-                {
-                    connection.Open();
-                    var command = connection.CreateCommand();
-                    command.CommandText = @"
-                    
-                   INSERT INTO Library (Title, Author, Description, Cover, PublishD, Rating) 
-                    VALUES ('test title', 'test Author', 'test desc', 'test cover', 'test publish', 'test rating' )
-                ";
-
-                    int commandResult = command.ExecuteNonQuery();
-                    
-                }
-
-
 
                 this.booksToAddToUserLibrary = tempList;
                 this.DialogResult = DialogResult.OK;
