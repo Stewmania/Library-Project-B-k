@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Net;
 using System.Diagnostics;
 using IronPython.Hosting;
 using IronPython.Runtime;
@@ -35,7 +36,8 @@ namespace Buk {
         InitializeComponent();
         this.booksToAddToDatabase = new List<Dictionary<string, string>>();
 
-
+        
+        
     }
 
 
@@ -241,15 +243,97 @@ namespace Buk {
 
     private void Buk_Main_Interface_Load(object sender, EventArgs e)
     {
+            //TESTING PURPOSES
+            
+            List<Dictionary<string, string>> printList = new List<Dictionary<string, string>>();
+            int count = 0;
 
-    }
 
-    private void testOutput_TextChanged(object sender, EventArgs e)
+            //$"INSERT INTO Library (Title, Author, Description, Cover, PublishD, Rating) VALUES (@Title, @Author, @Description, @Cover, @Publish, @Rating )"
+
+            var connection = new SQLiteConnection("Data Source = BukDB.db");
+            connection.Open();
+
+            string stm = "SELECT * FROM Library";
+
+            var cmd = new SQLiteCommand(stm, connection);
+            SQLiteDataReader rdr = cmd.ExecuteReader();
+
+            
+
+            while (rdr.Read())
+            {
+                if (rdr.GetString(4) != "test cover")
+                {
+                    Debug.WriteLine(rdr.GetString(4));
+                    Dictionary<string, string> printDictionary = new Dictionary<string, string>();
+                    printDictionary.Add("Title", rdr.GetString(1));
+                    printDictionary.Add("Description", rdr.GetString(3));
+                    printDictionary.Add("Cover", rdr.GetString(4));
+                    printDictionary.Add("Published Date", rdr.GetString(5));
+                    printDictionary.Add("Rating", rdr.GetString(6));
+                    printDictionary.Add("Author(s)", rdr.GetString(2));
+                    printList.Add(printDictionary);
+                    Debug.WriteLine($"{rdr.GetString(1)} {rdr.GetString(2)} {rdr.GetString(4)} {rdr.GetString(5)} {rdr.GetString(6)}");
+                } 
+            }
+
+            connection.Close();
+            
+            
+            foreach (Dictionary<string, string> book in printList)
+            {
+                CheckBox box = new CheckBox();
+                box.Width = 150;
+                box.Height = 200;
+                box.Name = count.ToString();
+                if (book["Cover"] == null || book["Cover"].Equals(""))
+                {
+                    box.Text = book["Title"];
+                    box.CheckAlign = ContentAlignment.MiddleLeft;
+                }
+                else
+                {
+                    box.Image = resizeImage(getImageFromURL(book["Cover"]));
+                    box.CheckAlign = ContentAlignment.BottomCenter;
+                }
+                Display.Controls.Add(box);
+                count++;
+            }
+        }
+
+        private Image getImageFromURL(string url)
+        {
+            WebRequest req = WebRequest.Create(url);
+            WebResponse res = req.GetResponse();
+            Stream imgStream = res.GetResponseStream();
+            Image image = Image.FromStream(imgStream);
+            imgStream.Close();
+
+            return image;
+        }
+
+        private Bitmap resizeImage(Image image)
+        {
+            Bitmap resizedImage = new Bitmap(150, 200);
+            using (Graphics graphics = Graphics.FromImage(resizedImage))
+                graphics.DrawImage(image, new Rectangle(0, 0, 150, 200), 0, 0, image.Width, image.Height, GraphicsUnit.Pixel);
+            return resizedImage;
+        }
+
+        private void testOutput_TextChanged(object sender, EventArgs e)
     {
 
     }
 
-   }
+        private void Refresh_Click(object sender, EventArgs e)
+        {
+            Display.Controls.Clear();
+            Buk_Main_Interface_Load(1, new EventArgs());
+        }
+    }
+
+    
 }
 
 
