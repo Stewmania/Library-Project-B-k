@@ -157,7 +157,8 @@ namespace Buk {
 
 
                             int commandResult = command.ExecuteNonQuery();
-
+                            Display.Controls.Clear();
+                            Buk_Main_Interface_Load(1, new EventArgs());
 
                         }
                     }
@@ -204,8 +205,9 @@ namespace Buk {
 
 
                         int commandResult = command.ExecuteNonQuery();
-
-                    }
+                        Display.Controls.Clear();
+                        Buk_Main_Interface_Load(1, new EventArgs());
+                        }
                 }
             }
         }
@@ -255,6 +257,8 @@ namespace Buk {
             connection.Open();
 
             string stm = "SELECT * FROM Library";
+            //string stm = "DELETE FROM Library";
+
 
             var cmd = new SQLiteCommand(stm, connection);
             SQLiteDataReader rdr = cmd.ExecuteReader();
@@ -283,19 +287,17 @@ namespace Buk {
             
             foreach (Dictionary<string, string> book in printList)
             {
-                CheckBox box = new CheckBox();
+                PictureBox box = new PictureBox();
                 box.Width = 150;
                 box.Height = 200;
                 box.Name = count.ToString();
                 if (book["Cover"] == null || book["Cover"].Equals(""))
                 {
                     box.Text = book["Title"];
-                    box.CheckAlign = ContentAlignment.MiddleLeft;
                 }
                 else
                 {
                     box.Image = resizeImage(getImageFromURL(book["Cover"]));
-                    box.CheckAlign = ContentAlignment.BottomCenter;
                 }
                 Display.Controls.Add(box);
                 count++;

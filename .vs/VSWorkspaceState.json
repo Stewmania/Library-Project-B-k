@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Buk",
+    "\\Buk\\bin",
+    "\\Buk\\bin\\Debug"
   ],
+  "SelectedNode": "\\Buk\\bin\\Debug\\BukDB.db",
   "PreviewInSolutionExplorer": false
 }
