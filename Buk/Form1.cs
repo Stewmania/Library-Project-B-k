@@ -50,7 +50,7 @@ namespace Buk {
     {
         System.Diagnostics.Process process = new System.Diagnostics.Process();
         process.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-        process.StartInfo.FileName = @"..\..\FetchBuks\amazon\fetchBuk.exe";
+        process.StartInfo.FileName = @"..\..\FetchBuks\amazon\amazon.exe";
         process.StartInfo.Arguments = barcode;
         process.StartInfo.UseShellExecute = false;
         process.StartInfo.CreateNoWindow = true;

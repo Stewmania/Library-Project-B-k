@@ -3,8 +3,10 @@
     "",
     "\\Buk",
     "\\Buk\\bin",
-    "\\Buk\\bin\\Debug"
+    "\\Buk\\bin\\Debug",
+    "\\Buk\\FetchBuks",
+    "\\Buk\\FetchBuks\\amazon"
   ],
-  "SelectedNode": "\\Buk\\bin\\Debug\\BukDB.db",
+  "SelectedNode": "\\Buk\\FetchBuks\\amazon",
   "PreviewInSolutionExplorer": false
 }
